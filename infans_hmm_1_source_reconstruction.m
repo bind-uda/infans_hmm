@@ -14,12 +14,12 @@ close all; clear; clc;
 subjectList   = setdiff(1:68, [10 19 24:25 45 59:60 66]);
 dataPath      = '...';
 savePath      = '...';
-headModelPath = '...\AED\Head Model\';
+
 
 % loading source space stuff
-load([headModelPath 'Atlas.mat'])
-load([headModelPath 'CollapseOperator.mat'])
-load([headModelPath 'InverseOperator.mat'])
+load('Atlas.mat')
+load('CollapseOperator.mat')
+load('InverseOperator.mat')
 
 % leakage correction and dipole resolving initalization
 Fs                         = 100;           % sampling rate
